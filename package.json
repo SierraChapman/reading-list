@@ -1,0 +1,24 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "full-stack application for adding books to a reading list and marking them as read",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SierraChapman/reading-list.git"
+  },
+  "author": "Sierra Chapman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SierraChapman/reading-list/issues"
+  },
+  "homepage": "https://github.com/SierraChapman/reading-list#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
