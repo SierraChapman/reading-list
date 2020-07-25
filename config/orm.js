@@ -10,6 +10,14 @@ const orm = {
       cb(result);
     });
   },
+
+  insertOne: function(tableName, data, cb) {
+    // inserts a row with provided data to the table identified by tableName
+    connection.query("INSERT INTO ?? SET ?", [tableName, data], (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
+  },
 };
 
 module.exports = orm;
