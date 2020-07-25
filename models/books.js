@@ -7,7 +7,10 @@ const books = {
     // gets data for all the books
     orm.selectAll("books", cb);
   },
-  // add -- adds a new book
+  add: function(title, cb) {
+    // adds a new book
+    orm.insertOne("books", {title: title}, cb);
+  },
   // markRead -- updates was_read to true for a book
 };
 
