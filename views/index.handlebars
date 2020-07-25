@@ -1,7 +1,17 @@
 <h1>Reading List</h1>
 
+<h2>Books to Read</h2>
+
 <ul>
     {{#each books}}
-        <li>{{title}}</li>
+        {{#unless was_read}}<li>{{title}}</li>{{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Books I've Read</h2>
+
+<ul>
+    {{#each books}}
+        {{#if was_read}}<li>{{title}}</li>{{/if}}
     {{/each}}
 </ul>
