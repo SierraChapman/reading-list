@@ -8,6 +8,12 @@
     {{/each}}
 </ul>
 
+<form action="/api/books/new" method="post" autocomplete="off">
+    <label for="new-book-title">Add a book:</label>
+    <input type="text" id="new-book-title" name="title" placeholder="Title">
+    <input type="submit" value="Submit">
+</form>
+
 <h2>Books I've Read</h2>
 
 <ul>
