@@ -2,13 +2,9 @@
 
 const mysql = require("mysql");
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "reading_list_db"
-});
+const MYSQL_URL = process.env.JAWSDB_URL || "mysql://root:password@localhost:3306/reading_list_db";
+
+const connection = mysql.createConnection(MYSQL_URL);
 
 connection.connect(err => {
   if (err) {
