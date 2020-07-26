@@ -21,7 +21,7 @@ router.post("/api/books/new", (req, res) => {
       return res.status(500).end();
     } else {
       // Rows were affected. Success! Tell to reload home page
-      res.redirect("/");
+      res.status(200).redirect("/");
     }
   });
 });
@@ -34,7 +34,7 @@ router.put("/api/books/:id", (req, res) => {
       return res.status(500).end();
     } else {
       // Rows were affected. Success! Tell to reload home page
-      res.redirect("/");
+      res.status(200).end();
     }
   });
 });

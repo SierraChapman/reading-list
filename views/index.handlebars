@@ -5,7 +5,7 @@
 <ul>
     {{#each books}}
         {{#unless was_read}}
-            <li>{{title}}</li>
+            <li>{{title}} <button class="mark-read-button" data-id={{id}}>mark as read</button></li>
         {{/unless}}
     {{/each}}
 </ul>
@@ -25,3 +25,14 @@
         {{/if}}
     {{/each}}
 </ul>
+
+<script>
+    $(".mark-read-button").click(event => {
+        const id = event.target.dataset.id;
+        $.ajax("/api/books/" + id, {
+            type: "PUT"
+        }).then(() => {
+            location.reload();
+        });
+    });
+</script>
