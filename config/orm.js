@@ -18,6 +18,15 @@ const orm = {
       cb(result);
     });
   },
+
+  updateOne: function(tableName, whereCondition, newData, cb) {
+    // update the row in tableName satisfying whereCondition (object with columnName-value pair)
+    // with provided newData (object of form {columnName: newValue})
+    connection.query("UPDATE ?? SET ? WHERE ?", [tableName, newData, whereCondition], (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
+  },
 };
 
 module.exports = orm;
