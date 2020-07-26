@@ -26,4 +26,17 @@ router.post("/api/books/new", (req, res) => {
   });
 });
 
+// marking a book as read
+router.put("/api/books/:id", (req, res) => {
+  books.markRead(req.params.id, result => {
+    if (result.changedRows === 0) {
+      // No rows were affected, so there must have been an error.
+      return res.status(500).end();
+    } else {
+      // Rows were affected. Success! Tell to reload home page
+      res.redirect("/");
+    }
+  });
+});
+
 module.exports = router;
