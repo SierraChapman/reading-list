@@ -4,7 +4,9 @@
 
 <ul>
     {{#each books}}
-        {{#unless was_read}}<li>{{title}}</li>{{/unless}}
+        {{#unless was_read}}
+            <li>{{title}}</li>
+        {{/unless}}
     {{/each}}
 </ul>
 
@@ -18,6 +20,8 @@
 
 <ul>
     {{#each books}}
-        {{#if was_read}}<li>{{title}}</li>{{/if}}
+        {{#if was_read}}
+            <li>{{title}}</li>
+        {{/if}}
     {{/each}}
 </ul>
