@@ -11,7 +11,10 @@ const books = {
     // adds a new book
     orm.insertOne("books", {title: title}, cb);
   },
-  // markRead -- updates was_read to true for a book
+  markRead: function(id, cb) {
+    // updates was_read to true for a book
+    orm.updateOne("books", {id: id}, {was_read: true}, cb);
+  },
 };
 
 module.exports = books;
