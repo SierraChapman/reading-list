@@ -29,7 +29,7 @@
     <ul>
         {{#each books}}
             {{#if was_read}}
-                <li>{{title}}</li>
+                <li>{{title}} <button class="delete-button" data-id={{id}}>delete</button></li>
             {{/if}}
         {{/each}}
     </ul>
@@ -40,6 +40,15 @@
         const id = event.target.dataset.id;
         $.ajax("/api/books/" + id, {
             type: "PUT"
+        }).then(() => {
+            location.reload();
+        });
+    });
+
+    $(".delete-button").click(event => {
+        const id = event.target.dataset.id;
+        $.ajax("/api/books/" + id, {
+            type: "DELETE"
         }).then(() => {
             location.reload();
         });

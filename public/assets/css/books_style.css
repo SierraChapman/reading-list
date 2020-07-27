@@ -63,9 +63,17 @@ li {
 }
 
 #add-book-button:hover {
-    background-color: rgba(105, 218, 90, 0.8);
+    background-color: rgba(105, 218, 90, 0.85);
 }
 
-.mark-read-button, #add-book-button {
+.delete-button {
+    background-color: rgba(240, 84, 84, 0.6);
+}
+
+.delete-button:hover {
+    background-color: rgba(240, 84, 84, 0.8);
+}
+
+.mark-read-button, #add-book-button, .delete-button {
     border-style: none;
 }
