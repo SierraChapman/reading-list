@@ -79,3 +79,11 @@ li {
 .mark-read-button, #add-book-button, .delete-button {
     border-style: none;
 }
+
+input {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: rgb(128, 128, 128);
+    border-style: inset;
+}
