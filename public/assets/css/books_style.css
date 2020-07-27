@@ -57,7 +57,7 @@ li {
 }
 
 .mark-read-button:hover {
-    background-color: rgba(94, 187, 230, 0.8);
+    background-color: rgba(94, 187, 230, 0.82);
 }
 
 #add-book-button {
@@ -65,7 +65,7 @@ li {
 }
 
 #add-book-button:hover {
-    background-color: rgba(105, 218, 90, 0.85);
+    background-color: rgba(105, 218, 90, 0.88);
 }
 
 .delete-button {
@@ -73,14 +73,14 @@ li {
 }
 
 .delete-button:hover {
-    background-color: rgba(240, 84, 84, 0.8);
+    background-color: rgba(240, 84, 84, 0.78);
 }
 
 .mark-read-button, #add-book-button, .delete-button {
     border-style: none;
 }
 
-input {
+#new-book-title {
     background-color: rgba(0, 0, 0, 0.01);
     border-width: 1px;
     border-radius: 3px;
