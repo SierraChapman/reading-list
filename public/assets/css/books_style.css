@@ -1,1 +1,7 @@
 /* for styling the page displayed to the client */
+
+body {
+    background-image: url("/assets/img/WoodTexture.svg");
+    background-size: cover;
+    background-color: rgb(170, 80, 29);
+}
