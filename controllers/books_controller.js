@@ -39,4 +39,17 @@ router.put("/api/books/:id", (req, res) => {
   });
 });
 
+// deleting a book
+router.delete("/api/books/:id", (req, res) => {
+  books.delete(req.params.id, result => {
+    if (result.affectedRows === 0) {
+      // No rows were affected, so there must have been an error.
+      return res.status(500).end();
+    } else {
+      // Rows were affected. Success! Tell to reload home page
+      res.status(200).end();
+    }
+  });
+});
+
 module.exports = router;

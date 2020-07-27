@@ -15,6 +15,10 @@ const books = {
     // updates was_read to true for a book
     orm.updateOne("books", {id: id}, {was_read: true}, cb);
   },
+  delete: function(id, cb) {
+    // deletes a book
+    orm.deleteOne("books", {id: id}, cb);
+  },
 };
 
 module.exports = books;

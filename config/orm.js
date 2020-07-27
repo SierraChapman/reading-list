@@ -27,6 +27,14 @@ const orm = {
       cb(result);
     });
   },
+
+  deleteOne: function(tableName, whereCondition, cb) {
+    // delete row that satisfies whereCondition in tableName
+    connection.query("DELETE FROM ?? WHERE ?", [tableName, whereCondition], (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
+  },
 };
 
 module.exports = orm;
