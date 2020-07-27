@@ -4,4 +4,41 @@ body {
     background-image: url("/assets/img/WoodTexture.svg");
     background-size: cover;
     background-color: rgb(170, 80, 29);
+    
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+li {
+    line-height: 1.5;
+    border-top: 1px solid rgba(94, 187, 230, 0.8);
+}
+
+h1, h2 {
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+header {
+    font-size: 3rem;
+    
+    margin: 1rem auto;
+    text-align: center;
+    width: 20rem;
+}
+
+header, #books-to-read, #books-have-read {
+    background-color: rgba(255, 255, 255, 0.900);
+    padding: 0.5rem;
+
+    margin: 2rem auto;
+    width: 25rem;
 }
