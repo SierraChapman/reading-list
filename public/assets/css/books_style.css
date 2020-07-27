@@ -49,3 +49,23 @@ li {
     border-top: 1px solid rgba(94, 187, 230, 0.8);
     padding: 0 0.5rem;
 }
+
+.mark-read-button {
+    background-color: rgba(94, 187, 230, 0.6);
+}
+
+.mark-read-button:hover {
+    background-color: rgba(94, 187, 230, 0.8);
+}
+
+#add-book-button {
+    background-color: rgba(105, 218, 90, 0.6);
+}
+
+#add-book-button:hover {
+    background-color: rgba(105, 218, 90, 0.8);
+}
+
+.mark-read-button, #add-book-button {
+    border-style: none;
+}
